@@ -53,6 +53,20 @@ Hero is a multipurpose theme with fullscreen hero images and fullwidth sections.
 
 To use this theme you will need to have Hugo installed. If you don't already have Hugo installed please follow the official [installation guide](https://gohugo.io/getting-started/installing/)
 
+```
+#winning forumla installation
+cd ..
+git clone --branch v0.51 https://github.com/gohugoio/hugo.git
+cd hugo
+go install --tags extended
+
+#test that it works
+
+hugo Version
+
+#should print version 0.51 and no errors.
+```
+
 ### Check Hugo Version
 
 This theme uses [Hugo Pipes](https://gohugo.io/hugo-pipes/scss-sass/) to compile SCSS and minify assets. Please make sure you have the `Hugo Extended` version installed. If you are not using the extended version this theme will not not compile.
@@ -67,7 +81,7 @@ hugo version
 hugo new site mynewsite
 ```
 
-This will create a fresh Hugo site in the folder `mynewsite`. 
+This will create a fresh Hugo site in the folder `mynewsite`.
 
 ### Install theme
 
@@ -110,6 +124,7 @@ theme = "hugo-hero-theme"
 
 After installing the theme for the first time, generate the Hugo site.
 
+
 You run this command from the root folder of your Hugo site ie `mynewsite/`
 
 ```
@@ -120,6 +135,12 @@ For local development run Hugo's built-in local server.
 
 ```
 hugo server
+```
+
+for gitpod.io enviroment run this:
+
+```
+hugo server -p 3000 --bind 0.0.0.0
 ```
 
 Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your browser.
